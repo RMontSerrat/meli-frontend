@@ -3,9 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development PORT=3000 node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "prod": "cross-env NODE_ENV=production PORT=3000 node server.js"
+    "start": "next start"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -13,7 +28,8 @@
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.27.0"
+    "sass": "^1.27.0",
+    "stylelint": "^13.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
