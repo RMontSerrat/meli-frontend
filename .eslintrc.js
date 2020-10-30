@@ -1,8 +1,12 @@
 module.exports = {
   root: true,
+  env: {
+    jest: true,
+  },
   extends: [
+    'plugin:react/recommended',
     'airbnb',
-    '@react-native-community',
+    'airbnb/hooks',
   ],
   parser: 'babel-eslint',
   plugins: [
@@ -14,7 +18,7 @@ module.exports = {
       {
         extensions: [
           '.js',
-          '.jsx'
+          '.jsx',
         ],
       },
     ],
