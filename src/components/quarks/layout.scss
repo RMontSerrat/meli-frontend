@@ -1,0 +1,10 @@
+%flex-default {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+%flex-default-column {
+  @extend %flex-default;
+  flex-direction: column;
+}

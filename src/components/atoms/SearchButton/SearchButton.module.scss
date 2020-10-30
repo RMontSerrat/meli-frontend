@@ -1,0 +1,14 @@
+.root {
+  padding: .4rem .8rem;
+  border: 0;
+  background-color: color(light, lightest);
+  outline: none;
+  cursor: pointer;
+  svg {
+    width: 16px;
+    height: 16px;
+    path {
+      fill: color(dark, base)
+    }
+  }
+}
