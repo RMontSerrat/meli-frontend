@@ -11,4 +11,11 @@ describe('<Input />', () => {
 
     expect(input).toBeInTheDocument();
   });
+
+  it('Snapshot', () => {
+    const { asFragment } = render(
+      <Input type="text" placeholder="Placeholder test" />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

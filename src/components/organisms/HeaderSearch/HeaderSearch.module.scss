@@ -1,0 +1,13 @@
+.HeaderSearch {
+
+  @extend %flex-default;
+
+  background-color: color(primary);
+  width: 100%;
+
+  img {
+    height: 30px;
+    margin-right: 10px;
+    width: auto;
+  }
+}

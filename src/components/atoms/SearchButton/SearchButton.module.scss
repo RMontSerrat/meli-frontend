@@ -1,14 +1,16 @@
-.root {
-  padding: .4rem .8rem;
-  border: 0;
+.SearchButton {
   background-color: color(light, lightest);
-  outline: none;
+  border: 0;
   cursor: pointer;
+  outline: none;
+  padding: 0.4rem 1rem;
+
   svg {
-    width: 16px;
     height: 16px;
+    width: 16px;
+
     path {
-      fill: color(dark, base)
+      fill: color(dark, base);
     }
   }
 }

@@ -1,0 +1,28 @@
+$color: color(dark, base);
+
+.Breadcrumb {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 10px 0;
+
+  li {
+    color: color(dark, base);
+    display: inline;
+    font-family: $font-family;
+    font-size: size(small);
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  svg {
+    padding: 0 5px;
+    width: 7px;
+
+    path {
+      fill: $color;
+    }
+  }
+}

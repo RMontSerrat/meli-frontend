@@ -1,3 +1,26 @@
 .SearchBar {
-  display: flex;
+  @extend %flex-default;
+
+  position: relative;
+  width: 100%;
+
+  .button {
+    position: absolute;
+    right: 0;
+
+    &::before {
+      border-left: 1px solid color(light, medium);
+      bottom: 0;
+      content: '';
+      height: 70%;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .input {
+    padding-right: 60px;
+  }
 }

@@ -9,7 +9,8 @@ module.exports = {
 
     config.resolve.alias = {
       ...config.resolve.alias,
-      "~/components": path.resolve(__dirname, "../src/components")
+      "~/components": path.resolve(__dirname, "../src/components"),
+      "~/utils": path.resolve(__dirname, "../src/utils")
     };
 
     const resourcesLoader = {
@@ -45,6 +46,7 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    "@storybook/addon-knobs"
   ]
 }

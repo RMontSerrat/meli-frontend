@@ -1,0 +1,7 @@
+.Container {
+  @extend %flex-default;
+
+  max-width: breakpoints(large);
+  padding: 20px;
+  width: 100%;
+}
