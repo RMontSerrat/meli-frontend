@@ -1,0 +1,63 @@
+.ProductCard {
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  width: 100%;
+
+  img {
+    height: 160px;
+    object-fit: contain;
+    width: 160px;
+  }
+
+  .informations {
+    padding-left: 10px;
+
+    h2 {
+      font-family: $font-family;
+      font-size: size(big);
+      font-weight: $font-thin;
+      margin: 0;
+      padding: 0 0 10px;
+    }
+  }
+
+  .location {
+    font-family: $font-family;
+    font-weight: $font-thin;
+    padding-top: 20px;
+  }
+
+  .freeShipping {
+    color: color(success);
+    font-family: $font-family;
+    font-size: size(small);
+    font-weight: $font-thin;
+    padding: 10px 0;
+  }
+
+  @media (max-width: breakpoint(medium)) {
+    grid-template-areas: 'a b'
+      '. d';
+    grid-template-columns: auto 2fr;
+    grid-template-rows: repeat(2, auto);
+
+    img {
+      grid-area: a;
+    }
+
+    .informations {
+      grid-area: b;
+    }
+
+    .location {
+      grid-area: d;
+      padding: 0 0 0 10px;
+    }
+  }
+  @media (max-width: breakpoint(mini)) {
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+}

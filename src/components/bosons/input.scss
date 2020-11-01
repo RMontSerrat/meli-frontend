@@ -1,0 +1,14 @@
+%input-font {
+  color: color(dark, darkest);
+  font-size: size(medium);
+  font-weight: $font-thin;
+}
+
+%input-bg {
+  background-color: color(light, lightest);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+%input-padding {
+  padding: 10px 15px;
+}

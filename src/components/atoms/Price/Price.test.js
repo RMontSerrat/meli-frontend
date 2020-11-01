@@ -5,7 +5,7 @@ import Price from './Price';
 
 describe('<Price />', () => {
   test('it should mount', () => {
-    render(<Price />);
+    render(<Price currency="$" amount={10000} decimals={11} />);
 
     const price = screen.getByTestId('Price');
 

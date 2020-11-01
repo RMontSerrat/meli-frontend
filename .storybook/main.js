@@ -17,9 +17,16 @@ module.exports = {
       loader: "sass-resources-loader",
       options: {
         resources: [
+          path.resolve(__dirname, "../src/components/bosons/layout.scss"),
           path.resolve(__dirname, "../src/components/bosons/colors.scss"),
           path.resolve(__dirname, "../src/components/bosons/typografy.scss"),
-          path.resolve(__dirname, "../src/components/quarks/layout.scss")
+          path.resolve(__dirname, "../src/components/bosons/button.scss"),
+          path.resolve(__dirname, "../src/components/bosons/card.scss"),
+          path.resolve(__dirname, "../src/components/bosons/input.scss"),
+          path.resolve(__dirname, "../src/components/quarks/button.scss"),
+          path.resolve(__dirname, "../src/components/quarks/card.scss"),
+          path.resolve(__dirname, "../src/components/quarks/input.scss"),
+          path.resolve(__dirname, "../src/styles/globals.scss")
         ]
       }
     };
@@ -46,7 +53,6 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-knobs"
+    "@storybook/addon-essentials"
   ]
 }

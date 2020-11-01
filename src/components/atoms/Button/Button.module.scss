@@ -1,0 +1,4 @@
+.Button {
+  @extend %button-config;
+  @extend %button-secondary-color;
+}

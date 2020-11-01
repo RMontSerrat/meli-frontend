@@ -11,7 +11,7 @@ const variants = [VARIANT_DEFAULT, VARIANT_BIG];
 const Price = ({
   currency, amount, decimals, variant,
 }) => (
-  <span className={classnames(styles.Price, styles[variants[variant]])}>
+  <span className={classnames(styles.Price, styles[variant])} data-testid="Price">
     <span className={styles.currency}>{currency}</span>
     <span className={styles.amount}>{`${formatPrice(amount)}`}</span>
     {decimals > 0 && (

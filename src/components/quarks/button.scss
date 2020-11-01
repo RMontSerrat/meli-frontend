@@ -1,0 +1,9 @@
+%button-config {
+  @extend %button-radius;
+  @extend %button-padding;
+  @extend %button-font;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}

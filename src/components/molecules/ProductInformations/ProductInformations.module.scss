@@ -1,0 +1,16 @@
+.ProductInformations {
+  .subtitle {
+    font-family: $font-family;
+    font-size: size(small);
+    font-weight: $font-thin;
+    white-space: pre-wrap;
+  }
+
+  .title {
+    font-family: $font-family;
+    font-size: size(xbig);
+    font-weight: $font-bold;
+    margin: 0;
+    padding: 10px 0 20px;
+  }
+}

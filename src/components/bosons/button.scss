@@ -1,0 +1,18 @@
+%button-radius {
+  border-radius: 4px;
+}
+
+%button-padding {
+  padding: 15px 24px;
+}
+
+%button-secondary-color {
+  background-color: color(secondary);
+  color: color(light, lightest);
+}
+
+%button-font {
+  font-family: $font-family;
+  font-size: size(medium);
+  font-weight: $font-bold;
+}

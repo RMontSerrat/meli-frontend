@@ -13,7 +13,7 @@
     "create-molecule": "npx generate-react-cli component --type=molecules",
     "create-organism": "npx generate-react-cli component --type=organisms",
     "create-template": "npx generate-react-cli component --type=templates",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {

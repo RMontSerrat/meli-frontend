@@ -1,0 +1,42 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './ProductDetails.module.scss';
+import { ProductInformations, ProductDescription } from '~/components/molecules';
+import Button from '~/components/atoms/Button/Button';
+import { Card } from '~/components/atoms';
+
+const ProductDetails = ({
+  imgUrl, name, condition, soldQuantity, price, onSubmit, description,
+}) => (
+  <Card>
+    <div className={styles.ProductDetails} data-testid="ProductDetails">
+      <img src={imgUrl} alt={name} title={name} className={styles.image} />
+      <div className={styles.actions}>
+        <ProductInformations
+          price={price}
+          name={name}
+          condition={condition}
+          soldQuantity={soldQuantity}
+        />
+        <Button classes={{ root: styles.button }} onClick={onSubmit}>Comprar</Button>
+      </div>
+      <ProductDescription classes={{ root: styles.description }} description={description} />
+    </div>
+  </Card>
+);
+
+ProductDetails.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  condition: PropTypes.string.isRequired,
+  soldQuantity: PropTypes.number.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.shape({
+    currency: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
+    decimals: PropTypes.number.isRequired,
+  }).isRequired,
+};
+
+export default ProductDetails;

@@ -1,0 +1,13 @@
+%input-config {
+  @extend %input-font;
+  @extend %input-bg;
+  @extend %input-padding;
+  border: 0;
+  display: flex;
+  outline: none;
+  width: 100%;
+
+  &::placeholder {
+    color: color(dark, light);
+  }
+}
