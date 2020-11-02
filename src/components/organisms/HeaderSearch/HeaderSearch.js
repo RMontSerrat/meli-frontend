@@ -17,7 +17,7 @@ const HeaderSearch = () => {
   };
 
   const handleSubmit = (value) => {
-    route.push(`/items?q=${value}`);
+    if (value.length > 2) route.push(`/items?q=${value}`);
   };
 
   return (

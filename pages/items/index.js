@@ -7,6 +7,7 @@ import { fetchProducts } from '~/services';
 import { Screen } from '~/components/templates';
 import { Breadcrumb } from '~/components/molecules';
 import { ProductsList } from '~/components/organisms';
+import { Loading } from '~/components/atoms';
 
 const Items = ({ initialData }) => {
   const route = useRouter();
@@ -18,6 +19,7 @@ const Items = ({ initialData }) => {
   return (
     <Screen title="Mercado Livre - Resultado de busca">
       <>
+        {loading && <Loading />}
         {!loading && (result ? (
           <>
             {result.categories && <Breadcrumb items={result.categories} />}

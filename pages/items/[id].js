@@ -8,6 +8,7 @@ import { Screen } from '~/components/templates';
 import { ProductDetails } from '~/components/organisms';
 import { Breadcrumb } from '~/components/molecules';
 import { getProductCondition } from '~/utils';
+import { Loading } from '~/components/atoms';
 
 const Items = ({ initialData }) => {
   const route = useRouter();
@@ -20,6 +21,7 @@ const Items = ({ initialData }) => {
   return (
     <Screen title={`Mercado Livre - ${item.title}`}>
       <>
+        {loading && <Loading />}
         {!loading && (item && item.id ? (
           <>
             {categories && <Breadcrumb items={categories} />}

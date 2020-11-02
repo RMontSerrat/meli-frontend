@@ -12,7 +12,7 @@ const Loading = () => (
     display="block"
   >
     <g transform="translate(80 50)">
-      <circle r={6} fill="#fff159">
+      <circle r={6} fill="#ffffff">
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -33,7 +33,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(45 -50.355 121.569)">
-      <circle r={6} fill="#fff159" fillOpacity={0.875}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.875}>
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -54,7 +54,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(90 -15 65)">
-      <circle r={6} fill="#fff159" fillOpacity={0.75}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.75}>
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -75,7 +75,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(135 -.355 41.569)">
-      <circle r={6} fill="#fff159" fillOpacity={0.625}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.625}>
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -96,7 +96,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(180 10 25)">
-      <circle r={6} fill="#fff159" fillOpacity={0.5}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.5}>
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -117,7 +117,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(-135 20.355 8.431)">
-      <circle r={6} fill="#fff159" fillOpacity={0.375}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.375}>
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -138,7 +138,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(-90 35 -15)">
-      <circle r={6} fill="#fff159" fillOpacity={0.25}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.25}>
         <animateTransform
           attributeName="transform"
           type="scale"
@@ -159,7 +159,7 @@ const Loading = () => (
       </circle>
     </g>
     <g transform="rotate(-45 70.355 -71.569)">
-      <circle r={6} fill="#fff159" fillOpacity={0.125}>
+      <circle r={6} fill="#ffffff" fillOpacity={0.125}>
         <animateTransform
           attributeName="transform"
           type="scale"

@@ -27,7 +27,7 @@
 
 ```bash
 git clone git@github.com:RMontSerrat/meli-frontend.git
-cd meli-bff
+cd meli-frontend
 ```
 
 #### Install dependencies:
