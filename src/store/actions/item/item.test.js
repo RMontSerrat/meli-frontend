@@ -1,5 +1,5 @@
-import actions from './index';
-import types from '~/store/types/item';
+import actions from './item';
+import { itemTypes } from '~/store/types';
 
 describe('actions', () => {
   it('should create an action to sucess item', () => {
@@ -15,7 +15,7 @@ describe('actions', () => {
     };
 
     const expectedAction = {
-      type: types.FETCH_ITEM_SUCCESS,
+      type: itemTypes.FETCH_ITEM_SUCCESS,
       payload,
     };
     expect(actions.getItemSuccess(payload)).toEqual(expectedAction);
@@ -23,14 +23,14 @@ describe('actions', () => {
 
   it('should create an action to pending item', () => {
     const expectedAction = {
-      type: types.FETCH_ITEM_PENDING,
+      type: itemTypes.FETCH_ITEM_PENDING,
     };
     expect(actions.getItemPending()).toEqual(expectedAction);
   });
 
   it('should create an action to error item', () => {
     const expectedAction = {
-      type: types.FETCH_ITEM_ERROR,
+      type: itemTypes.FETCH_ITEM_ERROR,
     };
     expect(actions.getItemError()).toEqual(expectedAction);
   });

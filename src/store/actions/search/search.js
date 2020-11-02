@@ -1,8 +1,8 @@
-import actionTypes from '~/store/types/search';
+import { searchTypes } from '~/store/types';
 
 const {
   FETCH_SEARCH_PENDING, FETCH_SEARCH_SUCCESS, FETCH_SEARCH_ERROR, CLEAR_SEARCH,
-} = actionTypes;
+} = searchTypes;
 
 const getProductsSuccess = (payload) => ({ type: FETCH_SEARCH_SUCCESS, payload });
 const getProductsPending = () => ({ type: FETCH_SEARCH_PENDING });

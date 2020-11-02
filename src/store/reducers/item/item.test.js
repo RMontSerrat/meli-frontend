@@ -1,5 +1,5 @@
-import reducer from './index';
-import types from '~/store/types/item';
+import reducer from './item';
+import { itemTypes } from '~/store/types';
 
 const initialState = {
   loading: false,
@@ -27,7 +27,7 @@ describe('reducer', () => {
   it('should handle FETCH_ITEM_PENDING', () => {
     expect(
       reducer({ ...initialState }, {
-        type: types.FETCH_ITEM_PENDING,
+        type: itemTypes.FETCH_ITEM_PENDING,
       }),
     ).toEqual(
       {
@@ -41,7 +41,7 @@ describe('reducer', () => {
     const payload = { title: 'tenis adidas' };
     expect(
       reducer({ ...initialState }, {
-        type: types.FETCH_ITEM_SUCCESS,
+        type: itemTypes.FETCH_ITEM_SUCCESS,
         payload,
       }),
     ).toEqual(
@@ -56,7 +56,7 @@ describe('reducer', () => {
   it('should handle FETCH_ITEM_ERROR', () => {
     expect(
       reducer({ ...initialState }, {
-        type: types.FETCH_ITEM_ERROR,
+        type: itemTypes.FETCH_ITEM_ERROR,
       }),
     ).toEqual(
       {
@@ -69,7 +69,7 @@ describe('reducer', () => {
   it('should handle CLEAR_ITEM', () => {
     expect(
       reducer({ ...initialState, item: { title: 'teste' } }, {
-        type: types.CLEAR_ITEM,
+        type: itemTypes.CLEAR_ITEM,
       }),
     ).toEqual(initialState);
   });

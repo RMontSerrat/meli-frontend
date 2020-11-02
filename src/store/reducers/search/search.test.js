@@ -1,5 +1,5 @@
-import reducer from './index';
-import types from '~/store/types/search';
+import reducer from './search';
+import { searchTypes } from '~/store/types';
 
 const initialState = {
   result: {
@@ -18,7 +18,7 @@ describe('reducer', () => {
   it('should handle FETCH_SEARCH_PENDING', () => {
     expect(
       reducer({ ...initialState }, {
-        type: types.FETCH_SEARCH_PENDING,
+        type: searchTypes.FETCH_SEARCH_PENDING,
       }),
     ).toEqual(
       {
@@ -39,7 +39,7 @@ describe('reducer', () => {
     };
     expect(
       reducer({ ...initialState }, {
-        type: types.FETCH_SEARCH_SUCCESS,
+        type: searchTypes.FETCH_SEARCH_SUCCESS,
         payload,
       }),
     ).toEqual(
@@ -54,7 +54,7 @@ describe('reducer', () => {
   it('should handle FETCH_SEARCH_ERROR', () => {
     expect(
       reducer({ ...initialState }, {
-        type: types.FETCH_SEARCH_ERROR,
+        type: searchTypes.FETCH_SEARCH_ERROR,
       }),
     ).toEqual(
       {
@@ -75,7 +75,7 @@ describe('reducer', () => {
 
     expect(
       reducer({ ...state }, {
-        type: types.CLEAR_SEARCH,
+        type: searchTypes.CLEAR_SEARCH,
       }),
     ).toEqual(
       {

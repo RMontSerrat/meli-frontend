@@ -1,5 +1,5 @@
-import itemTypes from './item';
-import searchTypes from './search';
+import itemTypes from './item/item';
+import searchTypes from './search/search';
 
 export {
   itemTypes,

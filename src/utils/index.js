@@ -1,6 +1,6 @@
-import formatPrice from './formatPrice';
-import formatDecimals from './formatDecimals';
-import getProductCondition from './getProductCondition';
+import formatPrice from './formatPrice/formatPrice';
+import formatDecimals from './formatDecimals/formatDecimals';
+import getProductCondition from './getProductCondition/getProductCondition';
 
 export {
   formatPrice,

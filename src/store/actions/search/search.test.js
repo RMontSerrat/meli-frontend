@@ -1,5 +1,5 @@
-import actions from './index';
-import types from '~/store/types/search';
+import actions from './search';
+import { searchTypes } from '~/store/types';
 
 describe('actions', () => {
   it('should create an action to sucess item', () => {
@@ -18,7 +18,7 @@ describe('actions', () => {
     };
 
     const expectedAction = {
-      type: types.FETCH_SEARCH_SUCCESS,
+      type: searchTypes.FETCH_SEARCH_SUCCESS,
       payload,
     };
     expect(actions.getProductsSuccess(payload)).toEqual(expectedAction);
@@ -26,14 +26,14 @@ describe('actions', () => {
 
   it('should create an action to pending Search', () => {
     const expectedAction = {
-      type: types.FETCH_SEARCH_PENDING,
+      type: searchTypes.FETCH_SEARCH_PENDING,
     };
     expect(actions.getProductsPending()).toEqual(expectedAction);
   });
 
   it('should create an action to error Search', () => {
     const expectedAction = {
-      type: types.FETCH_SEARCH_ERROR,
+      type: searchTypes.FETCH_SEARCH_ERROR,
     };
     expect(actions.getProductsError()).toEqual(expectedAction);
   });

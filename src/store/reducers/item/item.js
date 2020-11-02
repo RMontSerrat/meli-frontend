@@ -1,4 +1,4 @@
-import actionTypes from '~/store/types/item';
+import { itemTypes } from '~/store/types';
 
 const initialState = {
   loading: false,
@@ -20,24 +20,24 @@ const initialState = {
 
 const item = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.FETCH_ITEM_SUCCESS:
+    case itemTypes.FETCH_ITEM_SUCCESS:
       return {
         ...state,
         item: action.payload,
         error: false,
         loading: false,
       };
-    case actionTypes.FETCH_ITEM_PENDING:
+    case itemTypes.FETCH_ITEM_PENDING:
       return {
         ...state,
         loading: true,
       };
-    case actionTypes.FETCH_ITEM_ERROR:
+    case itemTypes.FETCH_ITEM_ERROR:
       return {
         ...state,
         error: true,
       };
-    case actionTypes.CLEAR_ITEM:
+    case itemTypes.CLEAR_ITEM:
       return initialState;
     default:
       return state;

@@ -1,4 +1,4 @@
-import actionTypes from '~/store/types/search';
+import { searchTypes } from '~/store/types';
 
 const initialState = {
   result: {
@@ -11,24 +11,24 @@ const initialState = {
 
 const search = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.FETCH_SEARCH_SUCCESS:
+    case searchTypes.FETCH_SEARCH_SUCCESS:
       return {
         ...state,
         result: action.payload,
         loading: false,
         error: false,
       };
-    case actionTypes.FETCH_SEARCH_PENDING:
+    case searchTypes.FETCH_SEARCH_PENDING:
       return {
         ...state,
         loading: true,
       };
-    case actionTypes.FETCH_SEARCH_ERROR:
+    case searchTypes.FETCH_SEARCH_ERROR:
       return {
         ...state,
         error: true,
       };
-    case actionTypes.CLEAR_SEARCH:
+    case searchTypes.CLEAR_SEARCH:
       return {
         ...state,
         result: {
