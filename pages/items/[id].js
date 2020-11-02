@@ -11,7 +11,6 @@ import { getProductCondition } from '~/utils';
 import { Loading } from '~/components/atoms';
 
 const Items = ({ initialData }) => {
-  console.log(initialData, 'initialData');
   const route = useRouter();
   const { query: { id } = {} } = route;
   const { loading = true, item } = useSelector((state) => state.item) || {};
