@@ -9,6 +9,7 @@
  - Remote data fetching with [SWR](https://github.com/vercel/swr) 
  - UI components isolate with [Storybook](https://storybook.js.org/)
  - Store management with [Redux](https://redux.js.org/)
+ - Components generate with [generate-react-cli](https://github.com/arminbro/generate-react-cli)
  - Consistent coding styles with [editorconfig](http://editorconfig.org)
  - Style with [Postcss](https://postcss.org/)
  - Linting js with [eslint](http://eslint.org)

@@ -20,7 +20,7 @@ const Items = ({ initialData }) => {
     <Screen title="Mercado Livre - Resultado de busca">
       <>
         {loading && <Loading />}
-        {!loading && (result ? (
+        {!loading && (result.items.length > 0 ? (
           <>
             {result.categories && <Breadcrumb items={result.categories} />}
             <ProductsList />
