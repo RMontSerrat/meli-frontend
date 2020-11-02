@@ -30,13 +30,17 @@ ProductDetails.propTypes = {
   name: PropTypes.string.isRequired,
   condition: PropTypes.string.isRequired,
   soldQuantity: PropTypes.number.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
   description: PropTypes.string.isRequired,
   price: PropTypes.shape({
     currency: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
     decimals: PropTypes.number.isRequired,
   }).isRequired,
+};
+
+ProductDetails.defaultProps = {
+  onSubmit: () => {},
 };
 
 export default ProductDetails;

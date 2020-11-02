@@ -19,7 +19,7 @@ const ProductCard = ({
       <h2>{name}</h2>
       <Price {...price} />
       {freeShipping && (
-        <div className={styles.freeShipping} data-testId="FreeShipping">
+        <div className={styles.freeShipping} data-testid="FreeShipping">
           Frete Grátis
         </div>
       )}

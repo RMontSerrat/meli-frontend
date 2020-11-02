@@ -4,11 +4,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { HeaderSearch } from '~/components/organisms';
+import { Container } from '~/components/templates';
 
 import favicon from '~/assets/images/favicon.ico';
 
 import styles from './Screen.module.scss';
-import { Container } from '~/components/templates';
 
 const Screen = ({ children, title }) => (
   <div className={styles.Screen} data-testid="Screen">
@@ -16,6 +16,7 @@ const Screen = ({ children, title }) => (
       <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
       <title>{title}</title>
       <link rel="icon" href={favicon} />
+      <link rel="stylesheet" type="text/css" href="/nprogress.css" />
     </Head>
     <HeaderSearch />
     <main className={styles.main}>

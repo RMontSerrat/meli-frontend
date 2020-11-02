@@ -1,4 +1,4 @@
-import { actionTypes } from '~/store/actions/item';
+import actionTypes from '~/store/types/item';
 
 const initialState = {
   loading: false,

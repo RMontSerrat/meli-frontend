@@ -10,7 +10,8 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "~/components": path.resolve(__dirname, "../src/components"),
-      "~/utils": path.resolve(__dirname, "../src/utils")
+      "~/utils": path.resolve(__dirname, "../src/utils"),
+      "~/hooks": path.resolve(__dirname, "../src/hooks")
     };
 
     const resourcesLoader = {

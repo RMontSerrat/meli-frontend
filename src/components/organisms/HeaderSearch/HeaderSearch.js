@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+
 import React from 'react';
 import { useRouter } from 'next/router';
 import styles from './HeaderSearch.module.scss';
@@ -7,7 +9,7 @@ import logo from '../../../assets/images/logo.png';
 
 const HeaderSearch = () => {
   const route = useRouter();
-  const { query: { q } = {} } = route;
+  const { query: { q } = {} } = route || {};
 
   const handleGoToHome = (e) => {
     e.preventDefault();

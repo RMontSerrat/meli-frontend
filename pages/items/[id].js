@@ -6,8 +6,8 @@ import { useFetchProduct } from '~/hooks';
 import { fetchProduct } from '~/services';
 import { Screen } from '~/components/templates';
 import { ProductDetails } from '~/components/organisms';
-import { Loading } from '~/components/atoms';
 import { Breadcrumb } from '~/components/molecules';
+import { getProductCondition } from '~/utils';
 
 const Items = ({ initialData }) => {
   const route = useRouter();
@@ -20,12 +20,11 @@ const Items = ({ initialData }) => {
   return (
     <Screen title={`Mercado Livre - ${item.title}`}>
       <>
-        {loading && <Loading />}
-        {!loading && (item ? (
+        {!loading && (item && item.id ? (
           <>
             {categories && <Breadcrumb items={categories} />}
             <ProductDetails
-              condition={item.condition}
+              condition={getProductCondition(item.condition)}
               freeShipping={item.free_shipping}
               imgUrl={item.picture}
               description={item.description}
@@ -48,12 +47,6 @@ const Items = ({ initialData }) => {
 
 Items.propTypes = {
   initialData: PropTypes.shape({
-    address: PropTypes.shape({
-      state_id: PropTypes.string,
-      state_name: PropTypes.string,
-      city_id: PropTypes.string,
-      city_name: PropTypes.string,
-    }).isRequired,
     condition: PropTypes.string.isRequired,
     description: PropTypes.string,
     sold_quantity: PropTypes.number,

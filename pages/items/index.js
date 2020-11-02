@@ -7,7 +7,7 @@ import { fetchProducts } from '~/services';
 import { Screen } from '~/components/templates';
 import { Breadcrumb, ProductCard } from '~/components/molecules';
 import List from '~/components/organisms/List/List';
-import { Card, Loading } from '~/components/atoms';
+import { Card } from '~/components/atoms';
 
 const Items = ({ initialData }) => {
   const route = useRouter();
@@ -23,7 +23,6 @@ const Items = ({ initialData }) => {
   return (
     <Screen title="Mercado Livre - Resultado de busca">
       <>
-        {loading && <Loading />}
         {!loading && (result ? (
           <>
             {result.categories && <Breadcrumb items={result.categories} />}
@@ -59,7 +58,7 @@ const Items = ({ initialData }) => {
 Items.propTypes = {
   initialData: PropTypes.shape({
     categories: PropTypes.arrayOf(PropTypes.string),
-    items: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
       address: PropTypes.shape({
         state_id: PropTypes.string,
         state_name: PropTypes.string,
@@ -78,7 +77,7 @@ Items.propTypes = {
         decimals: PropTypes.number,
       }).isRequired,
       title: PropTypes.string.isRequired,
-    }).isRequired,
+    })).isRequired,
   }).isRequired,
 };
 

@@ -10,6 +10,14 @@ const useFetchProduct = (id, initialData) => {
   const dispatch = useDispatch();
   const fetcher = (fetchUrl) => fetch(fetchUrl).then((r) => r.json());
 
+  const handleSuccess = ({ item: data }) => {
+    dispatch(item.getItemSuccess(data));
+  };
+
+  const handleError = () => {
+    dispatch(item.getItemError());
+  };
+
   useEffect(() => {
     if (!initialData) {
       dispatch(item.getItemPending());
@@ -20,14 +28,6 @@ const useFetchProduct = (id, initialData) => {
       dispatch(item.clearItem());
     };
   }, [initialData, dispatch]);
-
-  const handleSuccess = ({ item: data }) => {
-    dispatch(item.getItemSuccess(data));
-  };
-
-  const handleError = () => {
-    dispatch(item.getItemError());
-  };
 
   const response = useSWR(url, fetcher, {
     onSuccess: handleSuccess,

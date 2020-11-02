@@ -1,4 +1,4 @@
-import { actionTypes } from '~/store/actions/search';
+import actionTypes from '~/store/types/search';
 
 const initialState = {
   result: {

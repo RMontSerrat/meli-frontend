@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["public/*.css"],
   "rules": {
     "selector-class-pattern": null,
     "max-nesting-depth": 2
