@@ -14,7 +14,7 @@
  - Style with [Postcss](https://postcss.org/)
  - Linting js with [eslint](http://eslint.org)
  - Linting css with [stylelint](https://github.com/stylelint/stylelint)
- - Tests with [Testing-Library](https://mochajs.org) and [jest](http://chaijs.com)
+ - Tests with [Testing-Library](https://testing-library.com/) and [jest](https://jestjs.io/)
  - Code coverage with [istanbul](https://istanbul.js.org)
 
 ## Requirements
