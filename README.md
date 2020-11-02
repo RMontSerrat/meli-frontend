@@ -1,31 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Meli BFF
+## Features
+
+ - Uses [yarn](https://yarnpkg.com)
+ - Server-side rendering with [Nextjs](https://nextjs.org/) 
+ - Remote data fetching with [SWR](https://github.com/vercel/swr) 
+ - UI components isolate with [Storybook](https://storybook.js.org/)
+ - Store management with [Redux](https://redux.js.org/)
+ - Consistent coding styles with [editorconfig](http://editorconfig.org)
+ - Style with [Postcss](https://postcss.org/)
+ - Linting js with [eslint](http://eslint.org)
+ - Linting css with [stylelint](https://github.com/stylelint/stylelint)
+ - Tests with [Testing-Library](https://mochajs.org) and [jest](http://chaijs.com)
+ - Code coverage with [istanbul](https://istanbul.js.org)
+
+## Requirements
+
+ - [Node v12+](https://nodejs.org/en/download/current/)
+ - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Getting Started
 
-First, run the development server:
+#### Clone the repo and make it yours:
 
 ```bash
-npm run dev
-# or
+git clone git@github.com:RMontSerrat/meli-frontend.git
+cd meli-bff
+```
+
+#### Install dependencies:
+
+```bash
+yarn
+```
+
+#### Set environment variables:
+
+```bash
+cp .env.sample .env
+```
+
+## Running Locally
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running in Production
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+yarn start
+```
 
-## Learn More
+## Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+# lint js code and fix
+yarn lint:js
 
-## Deploy on Vercel
+# lint css code and fix
+yarn lint:css
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Test
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# meli-frontend
+```bash
+# run all tests with jest
+yarn test
+
+# run all tests and watch for changes
+yarn test:watch
+
+# test coverage reports
+yarn coverage
+```

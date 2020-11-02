@@ -32,6 +32,7 @@ const useFetchProducts = (q, initialData) => {
   const response = useSWR(url, fetcher, {
     onSuccess: handleSuccess,
     onError: handleError,
+    initialData,
   });
 
   return response;
