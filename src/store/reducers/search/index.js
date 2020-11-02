@@ -29,7 +29,13 @@ const search = (state = initialState, action) => {
         error: true,
       };
     case actionTypes.CLEAR_SEARCH:
-      return initialState;
+      return {
+        ...state,
+        result: {
+          ...state.result,
+          items: [],
+        },
+      };
     default:
       return state;
   }

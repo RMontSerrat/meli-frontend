@@ -1,10 +1,11 @@
 import React from 'react';
 import { Screen } from '~/components/templates';
-import { HeaderSearch } from '~/components/organisms';
 
 const Home = () => (
-  <Screen>
-    <HeaderSearch />
+  <Screen title="Mercado Livre">
+    <h2>
+      A maior Comunidade de compra e venda online da América Latina.
+    </h2>
   </Screen>
 );
 

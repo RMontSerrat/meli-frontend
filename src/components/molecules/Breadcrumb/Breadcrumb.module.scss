@@ -7,6 +7,7 @@ $color: color(dark, base);
   justify-content: flex-start;
   margin: 0;
   padding: 10px 0;
+  width: 100%;
 
   li {
     color: color(dark, base);
@@ -18,8 +19,8 @@ $color: color(dark, base);
   }
 
   svg {
-    padding: 0 5px;
-    width: 7px;
+    margin: 0 rem(7px);
+    width: rem(7px);
 
     path {
       fill: $color;

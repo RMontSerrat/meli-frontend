@@ -5,30 +5,30 @@
   width: 100%;
 
   .button {
-    margin-top: 50px;
+    margin-top: rem(50px);
   }
 
   .actions {
-    max-width: 350px;
-    width: 100%;
     justify-self: flex-end;
+    max-width: rem(350px);
+    width: 100%;
   }
 
   .image {
-    height: 500px;
+    height: rem(500px);
     object-fit: contain;
-    width: 500px;
+    width: rem(500px);
   }
 
   .description {
-    margin-top: 20px;
+    margin-top: rem(20px);
   }
   @media (max-width: breakpoint(medium)) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
 
     .image {
-      height: 300px;
+      height: rem(300px);
       width: 100%;
     }
 
@@ -37,7 +37,7 @@
     }
 
     .description {
-      margin-top: 70px;
+      margin-top: rem(70px);
     }
   }
 }

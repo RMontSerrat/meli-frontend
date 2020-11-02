@@ -4,13 +4,13 @@
   font-size: size(xbig);
 
   .currency {
-    padding-right: 5px;
+    padding-right: rem(5px);
   }
 
   .decimals {
     font-size: size(small);
     line-height: 0.5rem;
-    padding-left: 2px;
+    padding-left: rem(2px);
   }
 
   &.big {
