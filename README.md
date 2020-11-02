@@ -1,4 +1,7 @@
-# Meli BFF
+# Meli Front-End
+
+- Meli Front-end depends of [this BFF](https://github.com/rmontSerrat/meli-bff)
+
 ## Features
 
  - Uses [yarn](https://yarnpkg.com)
