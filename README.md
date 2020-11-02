@@ -81,5 +81,5 @@ yarn test
 yarn test:watch
 
 # test coverage reports
-yarn coverage
+yarn test:coverage
 ```
