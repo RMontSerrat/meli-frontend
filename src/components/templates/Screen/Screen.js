@@ -8,7 +8,7 @@ import { HeaderSearch } from '~/components/organisms';
 import favicon from '~/assets/images/favicon.ico';
 
 import styles from './Screen.module.scss';
-import Container from '~/components/templates';
+import { Container } from '~/components/templates';
 
 const Screen = ({ children, title }) => (
   <div className={styles.Screen} data-testid="Screen">
