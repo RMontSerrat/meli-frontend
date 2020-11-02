@@ -11,4 +11,11 @@ describe('<Button />', () => {
 
     expect(button).toBeInTheDocument();
   });
+
+  test('snapshot', () => {
+    const { asFragment } = render(
+      <Button>Button Test</Button>,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

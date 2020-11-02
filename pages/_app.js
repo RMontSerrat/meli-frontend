@@ -1,7 +1,18 @@
-import '../styles/globals.css';
+/* eslint-disable react/prop-types */
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import React from 'react';
+import { Provider } from 'react-redux';
+import { useStore } from '~/store';
+import '../styles/globals.scss';
 
-export default MyApp;
+const App = ({ Component, pageProps }) => {
+  const store = useStore(pageProps.initialReduxState);
+
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
+};
+
+export default App;

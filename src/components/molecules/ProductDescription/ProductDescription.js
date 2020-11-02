@@ -5,10 +5,10 @@ import styles from './ProductDescription.module.scss';
 
 const ProductDescription = ({ description, classes }) => (
   <div className={classNames(styles.ProductDescription, classes.root)} data-testid="ProductDescription">
-    <h2 className={classNames(styles.title, classes.title)}>
+    <h2 className={classNames(styles.title, classes.title)} data-testid="ProductDescription-title">
       Descrição do produto
     </h2>
-    <p className={classNames(styles.content, classes.content)}>
+    <p className={classNames(styles.content, classes.content)} data-testid="ProductDescription-content">
       {description}
     </p>
   </div>

@@ -14,11 +14,9 @@ const Price = ({
   <span className={classnames(styles.Price, styles[variant])} data-testid="Price">
     <span className={styles.currency}>{currency}</span>
     <span className={styles.amount}>{`${formatPrice(amount)}`}</span>
-    {decimals > 0 && (
     <span className={styles.decimals}>
       {formatDecimals(decimals)}
     </span>
-    )}
   </span>
 );
 

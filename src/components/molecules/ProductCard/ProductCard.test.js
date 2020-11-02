@@ -11,7 +11,6 @@ const product = {
     decimals: 12,
   },
   cityName: 'Rio de Janeiro',
-  freeShipping: true,
   name: 'Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta',
 };
 
@@ -22,5 +21,23 @@ describe('<ProductCard />', () => {
     const productCard = screen.getByTestId('ProductCard');
 
     expect(productCard).toBeInTheDocument();
+  });
+
+  test('snapshot', () => {
+    const { asFragment } = render(
+      <ProductCard {...product} />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('snapshot with freeShipping', () => {
+    const { asFragment } = render(
+      <ProductCard {...product} freeShipping />,
+    );
+
+    const freeShipping = screen.getByTestId('FreeShipping');
+
+    expect(freeShipping).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

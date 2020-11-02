@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Price /> snapshot with variatn big 1`] = `
+<DocumentFragment>
+  <span
+    class="Price big"
+    data-testid="Price"
+  >
+    <span
+      class="currency"
+    >
+      $
+    </span>
+    <span
+      class="amount"
+    >
+      10.000
+    </span>
+    <span
+      class="decimals"
+    >
+      11
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`<Price /> snapshot with variatn default 1`] = `
+<DocumentFragment>
+  <span
+    class="Price default"
+    data-testid="Price"
+  >
+    <span
+      class="currency"
+    >
+      $
+    </span>
+    <span
+      class="amount"
+    >
+      10.000
+    </span>
+    <span
+      class="decimals"
+    >
+      11
+    </span>
+  </span>
+</DocumentFragment>
+`;

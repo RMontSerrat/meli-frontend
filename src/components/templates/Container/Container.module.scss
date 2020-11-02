@@ -1,7 +1,13 @@
 .Container {
-  @extend %flex-default;
-
-  max-width: breakpoints(large);
+  display: flex;
+  max-width: breakpoint(large);
   padding: 20px;
   width: 100%;
+  &.column {
+    flex-direction: column;
+  }
+  &.row {
+    justify-content: flex-start;
+    align-items: center;
+  }
 }

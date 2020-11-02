@@ -13,4 +13,11 @@ describe('<Breadcrumb />', () => {
 
     expect(breadcrumb).toBeInTheDocument();
   });
+
+  test('snapshot', () => {
+    const { asFragment } = render(
+      <Breadcrumb items={defaultItems} />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

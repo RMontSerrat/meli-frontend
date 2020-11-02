@@ -13,4 +13,11 @@ describe('<Card />', () => {
 
     expect(card).toBeInTheDocument();
   });
+
+  test('snapshot', () => {
+    const { asFragment } = render(
+      <Card><div /></Card>,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

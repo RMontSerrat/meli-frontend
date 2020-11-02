@@ -1,7 +1,7 @@
 .ProductDetails {
   display: grid;
-  grid-template-columns: 3fr auto;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, auto);
   width: 100%;
 
   .button {
@@ -10,6 +10,8 @@
 
   .actions {
     max-width: 350px;
+    width: 100%;
+    justify-self: flex-end;
   }
 
   .image {

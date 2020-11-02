@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductInformations /> snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ProductInformations"
+    data-testid="ProductInformations"
+  >
+    <span
+      class="subtitle"
+    >
+      Novo | 122 vendidos
+    </span>
+    <h1
+      class="title"
+    >
+      Bateria P/ Note Dell Inspiron N4050 J1knd P22g
+    </h1>
+    <span
+      class="Price big"
+      data-testid="Price"
+    >
+      <span
+        class="currency"
+      >
+        $
+      </span>
+      <span
+        class="amount"
+      >
+        10.000
+      </span>
+      <span
+        class="decimals"
+      >
+        11
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;

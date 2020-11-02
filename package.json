@@ -39,8 +39,10 @@
     "autoprefixer": "^9.0.0",
     "classnames": "^2.2.6",
     "css-loader": "^5.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
+    "isomorphic-fetch": "^3.0.0",
     "jest": "^26.6.1",
     "list-react-files": "^0.2.0",
     "next": "9.5.5",
@@ -50,10 +52,14 @@
     "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
     "sass-resources-loader": "^2.1.1",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "swr": "^0.3.8"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

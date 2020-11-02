@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCard /> snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ProductCard"
+    data-testid="ProductCard"
+    role="button"
+    tabindex="0"
+  >
+    <img
+      alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+      src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
+      title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+    />
+    <div
+      class="informations"
+    >
+      <h2>
+        Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta
+      </h2>
+      <span
+        class="Price default"
+        data-testid="Price"
+      >
+        <span
+          class="currency"
+        >
+          R$
+        </span>
+        <span
+          class="amount"
+        >
+          1.000
+        </span>
+        <span
+          class="decimals"
+        >
+          12
+        </span>
+      </span>
+    </div>
+    <span
+      class="location"
+    >
+      Rio de Janeiro
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductCard /> snapshot with freeShipping 1`] = `
+<DocumentFragment>
+  <div
+    class="ProductCard"
+    data-testid="ProductCard"
+    role="button"
+    tabindex="0"
+  >
+    <img
+      alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+      src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
+      title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+    />
+    <div
+      class="informations"
+    >
+      <h2>
+        Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta
+      </h2>
+      <span
+        class="Price default"
+        data-testid="Price"
+      >
+        <span
+          class="currency"
+        >
+          R$
+        </span>
+        <span
+          class="amount"
+        >
+          1.000
+        </span>
+        <span
+          class="decimals"
+        >
+          12
+        </span>
+      </span>
+      <div
+        class="freeShipping"
+        data-testid="FreeShipping"
+      >
+        Frete Grátis
+      </div>
+    </div>
+    <span
+      class="location"
+    >
+      Rio de Janeiro
+    </span>
+  </div>
+</DocumentFragment>
+`;

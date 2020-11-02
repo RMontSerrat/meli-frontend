@@ -8,8 +8,16 @@ const resourcesLoader = {
   loader: 'sass-resources-loader',
   options: {
     resources: [
-      'src/components/bosons/index.scss',
-      'src/components/quarks/index.scss',
+      path.resolve(__dirname, 'src/components/bosons/layout.scss'),
+      path.resolve(__dirname, 'src/components/bosons/colors.scss'),
+      path.resolve(__dirname, 'src/components/bosons/typografy.scss'),
+      path.resolve(__dirname, 'src/components/bosons/button.scss'),
+      path.resolve(__dirname, 'src/components/bosons/card.scss'),
+      path.resolve(__dirname, 'src/components/bosons/input.scss'),
+      path.resolve(__dirname, 'src/components/quarks/button.scss'),
+      path.resolve(__dirname, 'src/components/quarks/card.scss'),
+      path.resolve(__dirname, 'src/components/quarks/input.scss'),
+      path.resolve(__dirname, 'src/styles/globals.scss'),
     ],
   },
 };
@@ -38,6 +46,7 @@ const nextConfig = {
       }
       return rule;
     });
+
     return config;
   },
 };

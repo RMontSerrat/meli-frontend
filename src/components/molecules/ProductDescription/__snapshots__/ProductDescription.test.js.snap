@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductDescription /> snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ProductDescription"
+    data-testid="ProductDescription"
+  >
+    <h2
+      class="title"
+      data-testid="ProductDescription-title"
+    >
+      Descrição do produto
+    </h2>
+    <p
+      class="content"
+      data-testid="ProductDescription-content"
+    >
+      Description text
+    </p>
+  </div>
+</DocumentFragment>
+`;
