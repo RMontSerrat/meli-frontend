@@ -2,6 +2,7 @@ import SearchButton from './SearchButton/SearchButton';
 import Input from './Input/Input';
 import Price from './Price/Price';
 import Card from './Card/Card';
+import Container from './Container/Container';
 import Button from './Button/Button';
 import Loading from './Loading/Loading';
 
@@ -12,4 +13,5 @@ export {
   Card,
   Loading,
   Button,
+  Container,
 };

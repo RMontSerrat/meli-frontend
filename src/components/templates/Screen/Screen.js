@@ -4,9 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { HeaderSearch } from '~/components/organisms';
-import { Container } from '~/components/templates';
+import { Container } from '~/components/atoms';
 
-import favicon from '~/assets/images/favicon.ico';
+import favicon from '../../../assets/images/favicon.ico';
 
 import styles from './Screen.module.scss';
 

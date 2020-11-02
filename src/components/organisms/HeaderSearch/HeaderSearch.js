@@ -4,7 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import styles from './HeaderSearch.module.scss';
 import { SearchBar } from '~/components/molecules';
-import { Container } from '~/components/templates';
+import { Container } from '~/components/atoms';
 import logo from '../../../assets/images/logo.png';
 
 const HeaderSearch = () => {
