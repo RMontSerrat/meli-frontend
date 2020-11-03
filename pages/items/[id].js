@@ -13,13 +13,13 @@ import { Loading } from '~/components/atoms';
 const Items = ({ initialData }) => {
   const route = useRouter();
   const { query: { id } = {} } = route;
-  const { loading = true, item } = useSelector((state) => state.item) || {};
+  const { loading = true, item } = useSelector((state) => state.item);
   const { result: { categories } = {} } = useSelector((state) => state.search);
 
   useFetchProduct(id, initialData);
 
   return (
-    <Screen title={`Mercado Livre - ${item.title}`}>
+    <Screen title={`Mercado Livre - ${(item && item.title) || 'Detalhes do produto'}`}>
       <>
         {loading && <Loading />}
         {!loading && (item && item.id ? (

@@ -2,7 +2,7 @@ import reducer from './item';
 import { itemTypes } from '~/store/types';
 
 const initialState = {
-  loading: false,
+  loading: true,
   error: false,
   item: {
     id: null,
