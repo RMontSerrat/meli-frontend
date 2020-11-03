@@ -5,7 +5,7 @@
   outline: none;
   width: 100%;
 
-  img {
+  .imgProduct {
     height: rem(160px);
     object-fit: contain;
     width: rem(160px);
@@ -17,10 +17,16 @@
     h2 {
       font-family: $font-family;
       font-size: size(big);
-      font-weight: $font-thin;
+      font-weight: $font-regular;
       margin: 0;
-      padding: 0 0 rem(10px);
+      padding-top: rem(10px);
     }
+  }
+
+  .priceContainer {
+    align-items: flex-end;
+    display: flex;
+    padding-top: rem(10px);
   }
 
   .location {
@@ -30,11 +36,13 @@
   }
 
   .freeShipping {
-    color: color(success);
-    font-family: $font-family;
-    font-size: size(small);
-    font-weight: $font-thin;
-    padding: rem(10px) 0;
+    margin: 0;
+    padding-left: rem(10px);
+  }
+
+  .imgShipping {
+    height: rem(20px);
+    width: rem(20px);
   }
 
   @media (max-width: breakpoint(medium)) {

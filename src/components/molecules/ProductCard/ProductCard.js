@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import imgShipping from '../../../assets/images/ic_shipping.png';
 import styles from './ProductCard.module.scss';
 import { Price } from '~/components/atoms';
 
@@ -14,15 +15,17 @@ const ProductCard = ({
     onKeyDown={onClick}
     tabIndex={0}
   >
-    <img src={imgUrl} alt={name} title={name} />
+    <img src={imgUrl} alt={name} title={name} className={styles.imgProduct} />
     <div className={styles.informations}>
+      <div className={styles.priceContainer}>
+        <Price {...price} />
+        {freeShipping && (
+          <figure className={styles.freeShipping} data-testid="FreeShipping">
+            <img src={imgShipping} alt="Mercado Livre - Frete Grátis" className={styles.imgShipping} />
+          </figure>
+        )}
+      </div>
       <h2>{name}</h2>
-      <Price {...price} />
-      {freeShipping && (
-        <div className={styles.freeShipping} data-testid="FreeShipping">
-          Frete Grátis
-        </div>
-      )}
     </div>
     <span className={styles.location}>
       {cityName}
