@@ -10,35 +10,40 @@ exports[`<ProductCard /> snapshot 1`] = `
   >
     <img
       alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+      class="imgProduct"
       src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
       title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
     />
     <div
       class="informations"
     >
+      <div
+        class="priceContainer"
+      >
+        <span
+          class="Price default"
+          data-testid="Price"
+        >
+          <span
+            class="currency"
+          >
+            R$
+          </span>
+          <span
+            class="amount"
+          >
+            1.000
+          </span>
+          <span
+            class="decimals"
+          >
+            12
+          </span>
+        </span>
+      </div>
       <h2>
         Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta
       </h2>
-      <span
-        class="Price default"
-        data-testid="Price"
-      >
-        <span
-          class="currency"
-        >
-          R$
-        </span>
-        <span
-          class="amount"
-        >
-          1.000
-        </span>
-        <span
-          class="decimals"
-        >
-          12
-        </span>
-      </span>
     </div>
     <span
       class="location"
@@ -59,41 +64,50 @@ exports[`<ProductCard /> snapshot with freeShipping 1`] = `
   >
     <img
       alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+      class="imgProduct"
       src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
       title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
     />
     <div
       class="informations"
     >
+      <div
+        class="priceContainer"
+      >
+        <span
+          class="Price default"
+          data-testid="Price"
+        >
+          <span
+            class="currency"
+          >
+            R$
+          </span>
+          <span
+            class="amount"
+          >
+            1.000
+          </span>
+          <span
+            class="decimals"
+          >
+            12
+          </span>
+        </span>
+        <figure
+          class="freeShipping"
+          data-testid="FreeShipping"
+        >
+          <img
+            alt="Mercado Livre - Frete Grátis"
+            class="imgShipping"
+            src="ic_shipping.png"
+          />
+        </figure>
+      </div>
       <h2>
         Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta
       </h2>
-      <span
-        class="Price default"
-        data-testid="Price"
-      >
-        <span
-          class="currency"
-        >
-          R$
-        </span>
-        <span
-          class="amount"
-        >
-          1.000
-        </span>
-        <span
-          class="decimals"
-        >
-          12
-        </span>
-      </span>
-      <div
-        class="freeShipping"
-        data-testid="FreeShipping"
-      >
-        Frete Grátis
-      </div>
     </div>
     <span
       class="location"
