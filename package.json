@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && yarn build-storybook",
     "start": "next start",
-    "heroku-postbuild": "yarn build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
@@ -17,7 +16,7 @@
     "create-organism": "npx generate-react-cli component --type=organisms",
     "create-template": "npx generate-react-cli component --type=templates",
     "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o public"
   },
   "lint-staged": {
     "*.{js,jsx}": [
