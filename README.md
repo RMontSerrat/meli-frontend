@@ -61,6 +61,23 @@ yarn start
 yarn build
 ```
 
+
+## Creating components
+
+```bash
+# create atom
+yarn create-atom <ComponentName>
+
+# create molecule
+yarn create-molecule <ComponentName>
+
+# create organism
+yarn create-organism <ComponentName>
+
+# create template
+yarn create-template <ComponentName>
+```
+
 ## Lint
 
 ```bash
