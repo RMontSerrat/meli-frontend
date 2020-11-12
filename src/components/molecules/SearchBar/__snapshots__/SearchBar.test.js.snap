@@ -19,8 +19,6 @@ exports[`<SearchBar /> snapshot 1`] = `
     >
       <svg
         class="svg-inline--fa fa-search fa-w-16 fa-3x"
-        data-icon="search"
-        data-prefix="fal"
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
       >

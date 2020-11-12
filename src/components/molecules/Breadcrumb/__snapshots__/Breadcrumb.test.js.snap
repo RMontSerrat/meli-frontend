@@ -11,8 +11,6 @@ exports[`<Breadcrumb /> snapshot 1`] = `
     </li>
     <svg
       class="svg-inline--fa fa-angle-right fa-w-6 fa-3x"
-      data-icon="angle-right"
-      data-prefix="fal"
       viewBox="0 0 192 512"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,8 +24,6 @@ exports[`<Breadcrumb /> snapshot 1`] = `
     </li>
     <svg
       class="svg-inline--fa fa-angle-right fa-w-6 fa-3x"
-      data-icon="angle-right"
-      data-prefix="fal"
       viewBox="0 0 192 512"
       xmlns="http://www.w3.org/2000/svg"
     >
