@@ -5,7 +5,7 @@
   outline: none;
   width: 100%;
 
-  .imgProduct {
+  .img-product {
     height: rem(160px);
     object-fit: contain;
     width: rem(160px);
@@ -23,7 +23,7 @@
     }
   }
 
-  .priceContainer {
+  .price-container {
     align-items: flex-end;
     display: flex;
     padding-top: rem(10px);
@@ -35,12 +35,12 @@
     padding-top: rem(20px);
   }
 
-  .freeShipping {
+  .free-shipping {
     margin: 0;
     padding-left: rem(10px);
   }
 
-  .imgShipping {
+  .img-shipping {
     height: rem(20px);
     width: rem(20px);
   }
@@ -55,12 +55,12 @@
       grid-area: a;
     }
 
-    .priceContainer {
+    .price-container {
       align-items: flex-start;
       flex-direction: column;
     }
 
-    .freeShipping {
+    .free-shipping {
       padding-left: 0;
     }
 

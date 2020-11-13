@@ -8,12 +8,19 @@ exports[`<ProductCard /> snapshot 1`] = `
     role="button"
     tabindex="0"
   >
-    <img
-      alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
-      class="imgProduct"
-      src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
-      title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
-    />
+    <figure
+      class="ProgressiveImage imgProduct"
+      data-testid="ProgressiveImage"
+    >
+      <span
+        class="overlayImage"
+      />
+      <img
+        alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+        src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
+        title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+      />
+    </figure>
     <div
       class="informations"
     >
@@ -62,12 +69,19 @@ exports[`<ProductCard /> snapshot with freeShipping 1`] = `
     role="button"
     tabindex="0"
   >
-    <img
-      alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
-      class="imgProduct"
-      src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
-      title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
-    />
+    <figure
+      class="ProgressiveImage imgProduct"
+      data-testid="ProgressiveImage"
+    >
+      <span
+        class="overlayImage"
+      />
+      <img
+        alt="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+        src="https://http2.mlstatic.com/D_NQ_NP_600943-MLB31871248861_082019-V.webp"
+        title="Bateria Notebook - Dell Inspiron 14 3442 (14.8v) - Preta"
+      />
+    </figure>
     <div
       class="informations"
     >

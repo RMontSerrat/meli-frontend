@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import imgShipping from '../../../assets/images/ic_shipping.png';
 import styles from './ProductCard.module.scss';
-import { Price } from '~/components/atoms';
+import { Price, ProgressiveImage } from '~/components/atoms';
 
 const ProductCard = ({
   imgUrl, price, cityName, name, freeShipping, onClick,
@@ -15,7 +15,7 @@ const ProductCard = ({
     onKeyDown={onClick}
     tabIndex={0}
   >
-    <img src={imgUrl} alt={name} title={name} className={styles.imgProduct} />
+    <ProgressiveImage src={imgUrl} alt={name} title={name} className={styles.imgProduct} />
     <div className={styles.informations}>
       <div className={styles.priceContainer}>
         <Price {...price} />

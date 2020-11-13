@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import styles from './ProductDetails.module.scss';
 import { ProductInformations, ProductDescription } from '~/components/molecules';
 import Button from '~/components/atoms/Button/Button';
-import { Card } from '~/components/atoms';
+import { Card, ProgressiveImage } from '~/components/atoms';
 
 const ProductDetails = ({
   imgUrl, name, condition, soldQuantity, price, onSubmit, description,
 }) => (
   <Card>
     <div className={styles.ProductDetails} data-testid="ProductDetails">
-      <img src={imgUrl} alt={name} title={name} className={styles.image} />
+      <ProgressiveImage src={imgUrl} alt={name} title={name} className={styles.image} />
       <div className={styles.actions}>
         <ProductInformations
           price={price}

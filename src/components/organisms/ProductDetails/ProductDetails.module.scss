@@ -16,7 +16,6 @@
 
   .image {
     height: rem(500px);
-    object-fit: contain;
     width: rem(500px);
   }
 
@@ -29,6 +28,7 @@
 
     .image {
       height: rem(300px);
+      padding-bottom: rem(20px);
       width: 100%;
     }
 
