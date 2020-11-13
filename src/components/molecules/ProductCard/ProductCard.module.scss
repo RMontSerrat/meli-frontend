@@ -55,6 +55,15 @@
       grid-area: a;
     }
 
+    .priceContainer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .freeShipping {
+      padding-left: 0;
+    }
+
     .informations {
       grid-area: b;
     }
