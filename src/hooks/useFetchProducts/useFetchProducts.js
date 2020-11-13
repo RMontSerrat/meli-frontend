@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import useSWR from 'swr';
-import fetch from 'isomorphic-fetch';
-import config from '~/config';
+import { fetchProducts, getUrlProducts } from '~/services';
 import { search } from '~/store/actions';
 
 const useFetchProducts = (q, initialData) => {
-  const url = `${config.apiUrl}/items?q=${q}`;
+  const url = getUrlProducts(q);
   const dispatch = useDispatch();
-  const fetcher = (fetchUrl) => fetch(fetchUrl).then((r) => r.json());
+  const fetcher = () => fetchProducts(q);
 
   useEffect(() => {
     if (!initialData) {

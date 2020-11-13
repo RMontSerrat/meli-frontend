@@ -1,10 +1,13 @@
 import fetch from 'isomorphic-fetch';
 import config from '~/config';
 
+const getUrlProduct = (id) => `${config.apiUrl}/items/${id}`;
+const getUrlProducts = (q) => `${config.apiUrl}/items?q=${q}`;
+
 const fetchProduct = async (id) => {
   if (!id) return null;
 
-  const url = `${config.apiUrl}/items/${id}`;
+  const url = getUrlProduct(id);
 
   try {
     const response = await fetch(url);
@@ -17,7 +20,7 @@ const fetchProduct = async (id) => {
 
 const fetchProducts = async (q) => {
   if (!q) return null;
-  const url = `${config.apiUrl}/items?q=${q}`;
+  const url = getUrlProducts(q);
 
   try {
     const response = await fetch(url);
@@ -29,6 +32,8 @@ const fetchProducts = async (q) => {
 };
 
 export {
+  getUrlProduct,
+  getUrlProducts,
   fetchProduct,
   fetchProducts,
 };

@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import useSWR from 'swr';
-import fetch from 'isomorphic-fetch';
-import config from '~/config';
+import { fetchProduct, getUrlProduct } from '~/services';
 import { item } from '~/store/actions';
 
 const useFetchProduct = (id, initialData) => {
-  const url = `${config.apiUrl}/items/${id}`;
+  const url = getUrlProduct(id);
   const dispatch = useDispatch();
-  const fetcher = (fetchUrl) => fetch(fetchUrl).then((r) => r.json());
+  const fetcher = () => fetchProduct(id);
 
   const handleSuccess = ({ item: data }) => {
     dispatch(item.getItemSuccess(data));
