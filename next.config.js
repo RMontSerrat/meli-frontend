@@ -18,6 +18,7 @@ const resourcesLoader = {
       path.resolve(__dirname, 'src/components/quarks/card.scss'),
       path.resolve(__dirname, 'src/components/quarks/input.scss'),
       path.resolve(__dirname, 'src/styles/globals.scss'),
+      path.resolve(__dirname, 'src/styles/reset.scss'),
     ],
   },
 };

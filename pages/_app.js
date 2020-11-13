@@ -5,7 +5,8 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 import { Provider } from 'react-redux';
 import { useStore } from '~/store';
-import '../styles/globals.scss';
+import '../styles/index.scss';
+import 'nprogress/nprogress.css';
 
 NProgress.configure({
   minimum: 0.3,
