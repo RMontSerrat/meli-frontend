@@ -3,7 +3,7 @@
 import NProgress from 'nprogress';
 import Router from 'next/router';
 
-const UseNProgress = () => {
+const useNProgress = () => {
   NProgress.configure({
     minimum: 0.3,
     easing: 'ease',
@@ -17,4 +17,4 @@ const UseNProgress = () => {
   return null;
 };
 
-export default UseNProgress;
+export default useNProgress;

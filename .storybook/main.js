@@ -34,7 +34,23 @@ module.exports = {
     
     config.module.rules.push({
       test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
+      use: ['style-loader', {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            localIdentName: '[local]--[hash:base64:5]',
+            exportLocalsConvention: 'camelCase'
+          },
+          sourceMap: true,
+        }
+      }, {
+        loader: 'sass-loader',
+        options: {
+          sassOptions: {
+            cssModules: true,
+          }
+        }
+      }],
       include: path.resolve(__dirname, '../'),
     });
     config.module.rules.map(rule => {
