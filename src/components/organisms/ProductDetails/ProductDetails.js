@@ -10,7 +10,7 @@ const ProductDetails = ({
 }) => (
   <Card>
     <div className={styles.ProductDetails} data-testid="ProductDetails">
-      <ProgressiveImage src={imgUrl} alt={name} title={name} className={styles.image} />
+      <ProgressiveImage src={imgUrl} alt={name} title={name} classes={{ root: styles.image }} />
       <div className={styles.actions}>
         <ProductInformations
           price={price}

@@ -4,19 +4,21 @@ import classNames from 'classnames';
 import styles from './ProgressiveImage.module.scss';
 
 const ProgressiveImage = ({
-  src, className, alt, ...props
+  src, classes, alt, ...props
 }) => {
   const [imageLoaded, changeImageLoaded] = useState(false);
 
+  const handleChangeImageLoaded = () => {
+    changeImageLoaded(true);
+  };
+
   return (
-    <figure className={classNames(styles.ProgressiveImage, className)} data-testid="ProgressiveImage">
+    <figure className={classNames(styles.ProgressiveImage, classes.root)} data-testid="ProgressiveImage">
       <span className={classNames(styles.overlayImage, { [styles.loaded]: imageLoaded })} />
       <img
         alt={alt}
         {...props}
-        onLoad={() => {
-          changeImageLoaded(true);
-        }}
+        onLoad={handleChangeImageLoaded}
         src={src}
       />
     </figure>
@@ -25,12 +27,14 @@ const ProgressiveImage = ({
 
 ProgressiveImage.propTypes = {
   src: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  classes: PropTypes.shape({
+    root: PropTypes.string,
+  }),
   alt: PropTypes.string.isRequired,
 };
 
 ProgressiveImage.defaultProps = {
-  className: null,
+  classes: {},
 };
 
 export default ProgressiveImage;

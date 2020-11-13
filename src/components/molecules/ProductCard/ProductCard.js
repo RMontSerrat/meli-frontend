@@ -15,7 +15,7 @@ const ProductCard = ({
     onKeyDown={onClick}
     tabIndex={0}
   >
-    <ProgressiveImage src={imgUrl} alt={name} title={name} className={styles.imgProduct} />
+    <ProgressiveImage src={imgUrl} alt={name} title={name} classes={{ root: styles.imgProduct }} />
     <div className={styles.informations}>
       <div className={styles.priceContainer}>
         <Price {...price} />
