@@ -1,12 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Screen } from '~/components/templates';
+import { withTranslation } from '~/i18n';
 
-const Home = () => (
+const Home = ({ t }) => (
   <Screen title="Mercado Livre">
     <h2>
-      A maior Comunidade de compra e venda online da América Latina.
+      {t('title')}
     </h2>
   </Screen>
 );
 
-export default Home;
+Home.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+
+export default withTranslation('common')(Home);

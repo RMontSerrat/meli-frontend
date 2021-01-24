@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { useFetchProducts } from '~/hooks';
+import { withTranslation } from '~/i18n';
 import { fetchProducts } from '~/services';
 import { Screen } from '~/components/templates';
 import { Breadcrumb } from '~/components/molecules';
 import { ProductsList } from '~/components/organisms';
 import { Loading } from '~/components/atoms';
 
-const Items = ({ initialData }) => {
+const Items = ({ initialData, t }) => {
   const route = useRouter();
   const { query: { q } = {} } = route;
   const { loading = true, result } = useSelector((state) => state.search);
@@ -17,7 +18,7 @@ const Items = ({ initialData }) => {
   useFetchProducts(q, initialData);
 
   return (
-    <Screen title="Mercado Livre - Resultado de busca">
+    <Screen title={t('h1')}>
       <>
         {loading && <Loading />}
         {!loading && (result.items.length > 0 ? (
@@ -57,6 +58,7 @@ Items.propTypes = {
       title: PropTypes.string.isRequired,
     })).isRequired,
   }).isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export async function getServerSideProps({ query: { q } }) {
@@ -64,4 +66,4 @@ export async function getServerSideProps({ query: { q } }) {
   return { props: { initialData: data } };
 }
 
-export default Items;
+export default withTranslation('common')(Items);

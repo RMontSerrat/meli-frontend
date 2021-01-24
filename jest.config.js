@@ -10,6 +10,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^~/components(.*)$': '<rootDir>/src/components$1',
+    '^~/i18n(.*)$': '<rootDir>/src/i18n$1',
     '^~/utils(.*)$': '<rootDir>/src/utils$1',
     '^~/services(.*)$': '<rootDir>/src/services$1',
     '^~/store(.*)$': '<rootDir>/src/store$1',

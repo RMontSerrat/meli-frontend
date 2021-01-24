@@ -1,3 +1,7 @@
+const { nextI18NextRewrites } = require('next-i18next/rewrites');
+
+const localeSubpaths = {};
+
 const path = require('path');
 const withPlugins = require('next-compose-plugins');
 const images = require('next-images');
@@ -51,6 +55,11 @@ const nextConfig = {
 
     return config;
   },
+  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  publicRuntimeConfig: {
+    localeSubpaths,
+  },
+
 };
 
 module.exports = withPlugins([
