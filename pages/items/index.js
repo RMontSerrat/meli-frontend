@@ -1,8 +1,9 @@
-import React from 'react';
+/* global window */
+
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import { useFetchProducts } from '~/hooks';
+import { useProducts } from '~/hooks';
 import { withTranslation } from '~/i18n';
 import { fetchProducts } from '~/services';
 import { Screen } from '~/components/templates';
@@ -13,18 +14,22 @@ import { Loading } from '~/components/atoms';
 const Items = ({ initialData, t }) => {
   const route = useRouter();
   const { query: { q } = {} } = route;
-  const { loading = true, result } = useSelector((state) => state.search);
+  const { loading, data } = useProducts(q, initialData);
 
-  useFetchProducts(q, initialData);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window?.localStorage?.setItem('currentSearch', q);
+    }
+  }, [q]);
 
   return (
     <Screen title={t('h1')}>
       <>
         {loading && <Loading />}
-        {!loading && (result.items.length > 0 ? (
+        {!loading && (data.items.length > 0 ? (
           <>
-            {result.categories && <Breadcrumb items={result.categories} />}
-            <ProductsList />
+            {data.categories && <Breadcrumb items={data.categories} />}
+            <ProductsList items={data.items} />
           </>
         ) : (
           <h3>Sem resultados de busca</h3>

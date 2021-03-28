@@ -1,12 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { ProductCard, List } from '~/components/molecules';
 import { Card } from '~/components/atoms';
 
-const ProductsList = () => {
+const ProductsList = ({ items }) => {
   const route = useRouter();
-  const { result: { items = [] } = {} } = useSelector((state) => state.search);
 
   const handleClickProduct = (id) => {
     route.push(`/items/${id}`);
@@ -35,4 +34,9 @@ const ProductsList = () => {
     </Card>
   );
 };
+
+ProductsList.propTypes = {
+  items: PropTypes.string.isRequired,
+};
+
 export default ProductsList;

@@ -1,9 +1,9 @@
-import useFetchProducts from './useFetchProducts/useFetchProducts';
-import useFetchProduct from './useFetchProduct/useFetchProduct';
+import useProducts from './useProducts/useProducts';
+import useProduct from './useProduct/useProduct';
 import useNProgress from './useNProgress/useNProgress';
 
 export {
-  useFetchProducts,
-  useFetchProduct,
+  useProducts,
+  useProduct,
   useNProgress,
 };

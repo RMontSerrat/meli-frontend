@@ -1,8 +1,9 @@
+/* global window */
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import { useFetchProduct } from '~/hooks';
+import { useProduct, useProducts } from '~/hooks';
 import { fetchProduct } from '~/services';
 import { Screen } from '~/components/templates';
 import { ProductDetails } from '~/components/organisms';
@@ -13,16 +14,14 @@ import { Loading } from '~/components/atoms';
 const Items = ({ initialData }) => {
   const route = useRouter();
   const { query: { id } = {} } = route;
-  const { loading = true, item } = useSelector((state) => state.item);
-  const { result: { categories } = {} } = useSelector((state) => state.search);
-
-  useFetchProduct(id, initialData);
+  const { loading, data: { item } = {} } = useProduct(id, initialData);
+  const { data: { categories } = {} } = useProducts(typeof window !== 'undefined' ? window?.localStorage?.getItem('currentSearch') : null);
 
   return (
-    <Screen title={`Mercado Livre - ${(item && item.title) || 'Detalhes do produto'}`}>
+    <Screen title={`Mercado Livre - ${(item?.title) || 'Detalhes do produto'}`}>
       <>
         {loading && <Loading />}
-        {!loading && (item && item.id ? (
+        {(!loading && item?.id) ? (
           <>
             {categories && <Breadcrumb items={categories} />}
             <ProductDetails
@@ -41,7 +40,7 @@ const Items = ({ initialData }) => {
           </>
         ) : (
           <h3>Produto não encontrado</h3>
-        ))}
+        )}
       </>
     </Screen>
   );
@@ -49,23 +48,25 @@ const Items = ({ initialData }) => {
 
 Items.propTypes = {
   initialData: PropTypes.shape({
-    condition: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    sold_quantity: PropTypes.number,
-    free_shipping: PropTypes.bool.isRequired,
-    id: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
-    price: PropTypes.shape({
-      currency: PropTypes.string,
-      amount: PropTypes.number,
-      decimals: PropTypes.number,
-    }).isRequired,
-    title: PropTypes.string.isRequired,
+    item: PropTypes.shape({
+      condition: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      sold_quantity: PropTypes.number,
+      free_shipping: PropTypes.bool.isRequired,
+      id: PropTypes.string.isRequired,
+      picture: PropTypes.string.isRequired,
+      price: PropTypes.shape({
+        currency: PropTypes.string,
+        amount: PropTypes.number,
+        decimals: PropTypes.number,
+      }).isRequired,
+      title: PropTypes.string.isRequired,
+    }),
   }).isRequired,
 };
 
 export async function getServerSideProps({ query: { id } }) {
-  const { item: data } = await fetchProduct(id);
+  const data = await fetchProduct(id);
   return { props: { initialData: data } };
 }
 

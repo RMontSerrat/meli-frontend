@@ -1,8 +1,0 @@
-const actionTypes = {
-  FETCH_ITEM_PENDING: 'FETCH_ITEM_PENDING',
-  FETCH_ITEM_SUCCESS: 'FETCH_ITEM_SUCCESS',
-  FETCH_ITEM_ERROR: 'FETCH_ITEM_ERROR',
-  CLEAR_ITEM: 'CLEAR_ITEM',
-};
-
-export default actionTypes;
