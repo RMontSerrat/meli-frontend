@@ -36,7 +36,8 @@ const ProductsList = ({ items }) => {
 };
 
 ProductsList.propTypes = {
-  items: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  items: PropTypes.array.isRequired,
 };
 
 export default ProductsList;
