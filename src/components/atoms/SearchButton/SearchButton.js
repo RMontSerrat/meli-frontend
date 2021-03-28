@@ -7,7 +7,7 @@ import styles from './SearchButton.module.scss';
 
 const SearchButton = ({ type, classes, ...props }) => (
   // eslint-disable-next-line react/button-has-type
-  <button className={classNames(classes.root, styles.SearchButton)} type={type} {...props}>
+  <button aria-label="search button" className={classNames(classes.root, styles.SearchButton)} type={type} {...props}>
     <SearchIcon />
   </button>
 );

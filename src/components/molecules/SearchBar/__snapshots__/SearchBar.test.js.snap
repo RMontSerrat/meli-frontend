@@ -14,6 +14,7 @@ exports[`<SearchBar /> snapshot 1`] = `
       value=""
     />
     <button
+      aria-label="search button"
       class="button SearchButton"
       type="submit"
     >

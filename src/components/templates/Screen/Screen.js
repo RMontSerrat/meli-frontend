@@ -13,7 +13,8 @@ import styles from './Screen.module.scss';
 const Screen = ({ children, title }) => (
   <div className={styles.Screen} data-testid="Screen">
     <Head>
-      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+      <meta name="description" />
       <title>{title}</title>
       <link rel="icon" href={favicon} />
       <link rel="stylesheet" type="text/css" href="/nprogress.css" />
