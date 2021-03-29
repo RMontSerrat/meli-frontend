@@ -24,7 +24,7 @@ const HeaderSearch = () => {
     <div className={styles.HeaderSearch} data-testid="HeaderSearch">
       <Container>
         <a href="/" onClick={handleGoToHome}>
-          <img src={logo} title="Mercado livre - Logo" alt="Logo" />
+          <img src={logo} width={118} height={30} title="Mercado livre - Logo" alt="Logo" />
         </a>
         <SearchBar value={q} onSubmit={handleSubmit} />
       </Container>

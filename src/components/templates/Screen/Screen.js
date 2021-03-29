@@ -15,7 +15,6 @@ const Screen = ({ children, title }) => (
     <Head>
       <meta name="viewport" content="width=device-width" />
       <meta name="description" content="Nextjs boilerplate" />
-      <meta name="robots" content="noindex" />
       <title>{title}</title>
       <link rel="icon" href={favicon} />
       <link rel="stylesheet" type="text/css" href="/nprogress.css" />
