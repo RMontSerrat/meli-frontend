@@ -28,7 +28,7 @@ const Items = ({ initialData, t }) => {
         {loading && <Loading />}
         {!loading && (data.items.length > 0 ? (
           <>
-            {data.categories && <Breadcrumb items={data.categories} />}
+            {data?.categories && <Breadcrumb items={data.categories} />}
             <ProductsList items={data.items} />
           </>
         ) : (
