@@ -1,6 +1,4 @@
-/* global window */
-
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useProducts } from '~/hooks';
@@ -16,17 +14,11 @@ const Items = ({ initialData, t }) => {
   const { query: { q } = {} } = route;
   const { loading, data } = useProducts(q, initialData);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window?.localStorage?.setItem('currentSearch', q);
-    }
-  }, [q]);
-
   return (
     <Screen title={t('h1')}>
       <>
         {loading && <Loading />}
-        {!loading && (data.items.length > 0 ? (
+        {!loading && (data?.items.length > 0 ? (
           <>
             {data?.categories && <Breadcrumb items={data.categories} />}
             <ProductsList items={data.items} />

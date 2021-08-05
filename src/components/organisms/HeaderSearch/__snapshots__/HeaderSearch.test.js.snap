@@ -15,8 +15,10 @@ exports[`<HeaderSearch /> snapshot 1`] = `
       >
         <img
           alt="Logo"
+          height="30"
           src="logo.png"
           title="Mercado livre - Logo"
+          width="118"
         />
       </a>
       <form
